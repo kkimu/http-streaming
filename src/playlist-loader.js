@@ -481,7 +481,7 @@ export default class PlaylistLoader extends EventTarget {
     const media = this.media();
 
     if (isFinalRendition) {
-      const delay = media ? (media.targetDuration / 2) * 1000 : 5 * 1000;
+      const delay = media ? (media.targetDuration / 2) * 5000 : 5 * 5000;
 
       this.mediaUpdateTimeout = window.setTimeout(() => this.load(), delay);
       return;
